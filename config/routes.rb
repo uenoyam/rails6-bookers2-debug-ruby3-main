@@ -13,7 +13,8 @@ Rails.application.routes.draw do
      resource :relationships, only: [:create, :destroy]
    end
   
-  
+  get 'followers/:id' => 'relationships#followers' , as: 'followers'
+  get 'followings/:id' => 'relationships#followings' , as: 'followings'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
 
